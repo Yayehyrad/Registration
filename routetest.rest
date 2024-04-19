@@ -1,0 +1,51 @@
+GET  http://localhost:3000/student/findAll
+
+
+###
+POST http://localhost:3000/student/create
+Content-Type: application/json
+
+{
+  "Stud_ID": "12345",
+  "studImage": "image.jpg",
+  "Fname": "John",
+  "Lname": "Doe",
+  "email": "johndoe@example.com",
+  "department_id": "CS",
+  "status": "active",
+  "year": "2022-01-01",   
+  "date_of_admission": "2022-01-01",
+  "grad_date": "2026-01-01",
+  "contact": 1234567,
+  "address": "123 Main St",
+  "emergencyC_fname": "Jane",
+  "emergencyC_lname": "Doe",
+  "emergencyC_contact": "0987654321",
+  "emergencyC_relation": "Spouse",
+  "birthdate": "1990-01-01",
+  "gender": "Male"
+}
+### update  
+PATCH  http://localhost:3000/student/update
+Content-Type: application/json
+
+{
+  "id" : "6621ff5e063abfe0112e7d76",
+  "contact": 1234567556678
+}
+### delete a student record
+DELETE http://localhost:3000/student/6621ff5e063abfe0112e7d76
+Content-Type: application/json
+### stud by id
+GET  http://localhost:3000/student/6621ff5e063abfe0112e7d76
+Content-Type: application/json
+### id status change 
+PATCH   http://localhost:3000/student/status/6621ff5e063abfe0112e7d76
+Content-Type: application/json
+
+{
+  "status": "inactive"
+}
+ 
+
+ 
